@@ -19,4 +19,3 @@ const getConnection = async () => {
 };
 
 export { pool, getConnection };
-console.log("DB_PASSWORD =", process.env.DB_PASSWORD);
