@@ -58,6 +58,15 @@ app.get('/api/v1/health', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'GitHub Profile Analyzer API is running 🚀',
+    docs: '/api/v1/docs',
+    health: '/api/v1/health'
+  });
+});
+
 app.use('/api/v1', profileRoutes);
 app.use(notFound);
 app.use(errorHandler);
