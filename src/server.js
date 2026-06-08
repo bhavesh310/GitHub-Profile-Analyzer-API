@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`GitHub Profile Analyzer running on port ${port}`);
